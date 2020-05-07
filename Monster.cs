@@ -25,5 +25,18 @@ namespace CreaturesAndInterface
             Console.WriteLine("   /   |   \\");
             Console.WriteLine("   \"\"\"\" \"\"\"\"");
         }
+        public static void DrawAMonster() 
+        {
+            Console.WriteLine("     _____");
+            Console.WriteLine(" .-,;='';_),-.");
+            Console.WriteLine("  \\_\\(),()/_/");
+            Console.WriteLine("　  (,___,)");
+            Console.WriteLine("   ,-/`~`\\-,___");
+            Console.WriteLine("  / /).:.('--._)");
+            Console.WriteLine(" {_[ (_,_)");
+            Console.WriteLine("    |  Y  |");
+            Console.WriteLine("   /   |   \\");
+            Console.WriteLine("   \"\"\"\" \"\"\"\"");
+        }
     }
 }

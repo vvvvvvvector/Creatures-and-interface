@@ -24,5 +24,17 @@ namespace CreaturesAndInterface
             Console.WriteLine("    |     |");
             Console.WriteLine("    '~~~~~'");
         }
+        public static void DrawAGhost() 
+        {
+            Console.WriteLine("     ..-..");
+            Console.WriteLine("    ( o o )");
+            Console.WriteLine("    |  O  |");
+            Console.WriteLine("    |     |");
+            Console.WriteLine("    |     |");
+            Console.WriteLine("    |     |");
+            Console.WriteLine("    |     |");
+            Console.WriteLine("    |     |");
+            Console.WriteLine("    '~~~~~'");
+        }
     }
 }
