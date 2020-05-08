@@ -8,11 +8,9 @@ namespace CreaturesAndInterface
         {
             Creature creature = new Creature();
 
-            Ghost.DrawAGhost();
-
-            Monster.DrawAMonster();
-
-            Bug.DrawABug();
+            Console.WriteLine("What kind of creature would you like to draw: a monster, a bug or a ghost?");
+            var choice = Console.ReadLine().Replace(" ", "");
+            FullCreature(choice);
 
             creature.Head = new Monster();
             creature.Head.DrawAHead();
@@ -22,6 +20,23 @@ namespace CreaturesAndInterface
             creature.Feet.DrawAFeet();
 
             Console.ReadLine();
+        }
+        public static void FullCreature(string creature) 
+        {
+            switch (creature.ToUpper()) 
+            {
+                case "GHOST":
+                    Ghost.DrawAGhost();
+                    break;
+                case "MONSTER":
+                    Monster.DrawAMonster();
+                    break;
+                case "BUG":
+                    Bug.DrawABug();
+                    break;
+                default: Console.WriteLine("You didn't choose a creature!");
+                    break;
+            }
         }
     }
 }
