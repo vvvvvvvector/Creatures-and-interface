@@ -6,18 +6,16 @@ namespace CreaturesAndInterface
     {
         static void Main(string[] args)
         {
-            Creature creature = new Creature();
-
             Console.WriteLine("What would you like to choose: random mode or full creature? 1 - full creature 2 - random creature");
-            var choise = Convert.ToInt32(Console.ReadLine());
+            var choise = Console.ReadLine();
             switch (choise)
             {
-                case 1:
+                case "1":
                     Console.WriteLine("What kind of creature would you like to draw: a monster, a bug or a ghost?");
                     var choice = Console.ReadLine().Replace(" ", "");
                     FullCreature(choice);
                     break;
-                case 2:
+                case "2":
                     RandomeMode();
                     break;
                 default: 
@@ -49,10 +47,7 @@ namespace CreaturesAndInterface
         {
             var creature = new Creature();
             var randomNumber = new Random();
-            var head = randomNumber.Next(1, 4);
-            var body = randomNumber.Next(1, 4);
-            var feet = randomNumber.Next(1, 4);
-            switch (head)
+            switch (randomNumber.Next(1, 4))
             {
                 case 1:
                     creature.Head = new Monster();
@@ -64,7 +59,7 @@ namespace CreaturesAndInterface
                     creature.Head = new Bug();
                     break;
             }
-            switch (body)
+            switch (randomNumber.Next(1, 4))
             {
                 case 1:
                     creature.Body = new Monster();
@@ -76,7 +71,7 @@ namespace CreaturesAndInterface
                     creature.Body = new Bug();
                     break;
             }
-            switch (feet)
+            switch (randomNumber.Next(1, 4))
             {
                 case 1:
                     creature.Feet = new Monster();
