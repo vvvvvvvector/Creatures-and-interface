@@ -12,8 +12,12 @@ namespace CreaturesAndInterface
                 case "1":
                     Console.WriteLine("What kind of creature would You like to draw: a monster, a bug or a ghost?");
                     var choice = Console.ReadLine().Replace(" ", "");
-                    Console.WriteLine($"It is a {choice.ToLower()}: ");
-                    FullCreature(choice);
+                    if (choice.ToUpper() == "MONSTER" || choice.ToUpper() == "BUG" || choice.ToUpper() == "GHOST")
+                    {
+                        Console.WriteLine($"It is a {choice.ToLower()}: ");
+                        FullCreature(choice);
+                    }
+                    else Console.WriteLine("You didn't choose a creature!"); ;
                     break;
                 case "2":
                     Console.WriteLine("It is Your random creature: ");
@@ -136,9 +140,6 @@ namespace CreaturesAndInterface
                     break;
                 case "BUG":
                     Bug.DrawABug();
-                    break;
-                default:
-                    Console.WriteLine("You didn't choose a creature!");
                     break;
             }
         }
