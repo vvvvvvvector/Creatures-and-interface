@@ -1,2 +1,2 @@
 # Creatures-and-interface
-Create your own creature!
+Create your **own** creature!
