@@ -23,16 +23,5 @@ namespace CreaturesAndInterface
             Console.WriteLine("     v   v");
             Console.WriteLine("     *****");
         }
-        public static void DrawABug() 
-        {
-            Console.WriteLine("     /   \\");
-            Console.WriteLine("     \\. ./");
-            Console.WriteLine("    (o + o)");
-            Console.WriteLine("  --|  |  |--");
-            Console.WriteLine("  --|  |  |--");
-            Console.WriteLine("  --|  |  |--");
-            Console.WriteLine("     v   v");
-            Console.WriteLine("     *****");
-        }
     }
 }

@@ -13,27 +13,14 @@ namespace CreaturesAndInterface
             Console.WriteLine("  \\_\\(),()/_/");
             Console.WriteLine("　  (,___,)");
         }
-        public void DrawABody() 
+        public void DrawABody()
         {
             Console.WriteLine("   ,-/`~`\\-,___");
             Console.WriteLine("  / /).:.('--._)");
             Console.WriteLine(" {_[ (_,_)");
         }
-        public void DrawAFeet() 
+        public void DrawAFeet()
         {
-            Console.WriteLine("    |  Y  |");
-            Console.WriteLine("   /   |   \\");
-            Console.WriteLine("   \"\"\"\" \"\"\"\"");
-        }
-        public static void DrawAMonster() 
-        {
-            Console.WriteLine("     _____");
-            Console.WriteLine(" .-,;='';_),-.");
-            Console.WriteLine("  \\_\\(),()/_/");
-            Console.WriteLine("　  (,___,)");
-            Console.WriteLine("   ,-/`~`\\-,___");
-            Console.WriteLine("  / /).:.('--._)");
-            Console.WriteLine(" {_[ (_,_)");
             Console.WriteLine("    |  Y  |");
             Console.WriteLine("   /   |   \\");
             Console.WriteLine("   \"\"\"\" \"\"\"\"");

@@ -37,7 +37,6 @@ namespace CreaturesAndInterface
                     Console.WriteLine("You didn't choose the mode!");
                     break;
             }
-
             Console.ReadLine();
         }
         public static void OwnChoiсe(string head, string body, string feet)
@@ -55,8 +54,7 @@ namespace CreaturesAndInterface
                     creature.Head = new Bug();
                     break;
                 default:
-                    var randomNumber = new Random();
-                    switch (randomNumber.Next(1, 4))
+                    switch (new Random().Next(1, 4))
                     {
                         case 1:
                             creature.Head = new Monster();
@@ -82,8 +80,7 @@ namespace CreaturesAndInterface
                     creature.Body = new Bug();
                     break;
                 default:
-                    var randomNumber = new Random();
-                    switch (randomNumber.Next(1, 4))
+                    switch (new Random().Next(1, 4))
                     {
                         case 1:
                             creature.Body = new Monster();
@@ -109,8 +106,7 @@ namespace CreaturesAndInterface
                     creature.Feet = new Bug();
                     break;
                 default:
-                    var randomNumber = new Random();
-                    switch (randomNumber.Next(1, 4))
+                    switch (new Random().Next(1, 4))
                     {
                         case 1:
                             creature.Feet = new Monster();
@@ -124,30 +120,28 @@ namespace CreaturesAndInterface
                     }
                     break;
             }
-            creature.Head.DrawAHead();
-            creature.Body.DrawABody();
-            creature.Feet.DrawAFeet();
+            creature.DrawACreature();
         }
         public static void FullCreature(string creature)
         {
+            var fullCreature = new Creature();
             switch (creature.ToUpper())
             {
                 case "GHOST":
-                    Ghost.DrawAGhost();
+                    fullCreature.DrawAGhost();
                     break;
                 case "MONSTER":
-                    Monster.DrawAMonster();
+                    fullCreature.DrawAMonster();
                     break;
                 case "BUG":
-                    Bug.DrawABug();
+                    fullCreature.DrawABug();
                     break;
             }
         }
         public static void RandomeMode()
         {
             var creature = new Creature();
-            var randomNumber = new Random();
-            switch (randomNumber.Next(1, 4))
+            switch (new Random().Next(1, 4))
             {
                 case 1:
                     creature.Head = new Monster();
@@ -159,7 +153,7 @@ namespace CreaturesAndInterface
                     creature.Head = new Bug();
                     break;
             }
-            switch (randomNumber.Next(1, 4))
+            switch (new Random().Next(1, 4))
             {
                 case 1:
                     creature.Body = new Monster();
@@ -171,7 +165,7 @@ namespace CreaturesAndInterface
                     creature.Body = new Bug();
                     break;
             }
-            switch (randomNumber.Next(1, 4))
+            switch (new Random().Next(1, 4))
             {
                 case 1:
                     creature.Feet = new Monster();
@@ -183,9 +177,7 @@ namespace CreaturesAndInterface
                     creature.Feet = new Bug();
                     break;
             }
-            creature.Head.DrawAHead();
-            creature.Body.DrawABody();
-            creature.Feet.DrawAFeet();
+            creature.DrawACreature();
         }
     }
 }
